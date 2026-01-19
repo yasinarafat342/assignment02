@@ -1,0 +1,521 @@
+/* ------------------ RESET ------------------ */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
+}
+
+body{
+  background:radial-gradient(circle at top,#2a0a4d,#12001f 70%);
+  color:#fff;
+}
+
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
+
+/* ------------------ UTILITIES ------------------ */
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:12px 22px;
+  border-radius:30px;
+  font-size:14px;
+  font-weight:600;
+  transition:.3s;
+}
+
+.btn-gradient{
+  background:linear-gradient(90deg,#ff4ecd,#ffb347);
+  color:#000;
+}
+
+.btn-outline{
+  border:1px solid #32ff9d;
+  color:#32ff9d;
+}
+
+.btn:hover{transform:translateY(-2px)}
+
+/* ------------------ NAVBAR ------------------ */
+.header{padding:20px 0}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{font-size:22px;font-weight:700}
+.logo span{color:#e215a8}
+
+.nav-menu{display:flex;gap:30px}
+.nav-menu a{font-size:14px;opacity:.85}
+
+.nav-action{display:flex;gap:20px;align-items:center}
+.hamburger{display:none;font-size:22px}
+
+/* ------------------ HERO ------------------ */
+.hero{
+  text-align:center;
+  padding:80px 0 100px;
+  position:relative;
+}
+
+.wave-line{
+  position:absolute;
+  top:50%;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#ff4ecd,#32ff9d,transparent);
+  opacity:.4;
+}
+
+.podcast-circle{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#ff4ecd,#ffb347);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:70px;
+  margin:0 auto 30px;
+  position:relative;
+}
+
+.badge{
+  position:absolute;
+  top:10px;
+  right:-5px;
+  background:#32ff9d;
+  color:#000;
+  font-size:11px;
+  padding:4px 8px;
+  border-radius:12px;
+  font-weight:700;
+}
+
+.hero-title{font-size:42px;margin-bottom:10px}
+.hero-text{max-width:600px;margin:0 auto 30px;opacity:.85}
+.hero-buttons{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+
+/* ------------------ ABOUT ------------------ */
+.about{padding:80px 0;text-align:center}
+.section-title{font-size:32px;margin-bottom:15px}
+.section-desc{max-width:700px;margin:0 auto 50px;opacity:.85}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.stat h3{color:#32ff9d;font-size:28px}
+.stat span{font-size:12px;opacity:.7}
+
+/* ------------------ FEATURES ------------------ */
+body {
+    background-color: #0f041d; /* Deep purple background */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 50px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.grid-container {
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+    /* Two equal columns */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #1a0b2e; /* Slightly lighter purple for cards */
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+    background-color: #25123d;
+}
+
+/* This makes the first card span two rows */
+.grid-item.tall {
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.grid-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+    /* Use filter to give icons a colorful glow if they are white */
+    filter: drop-shadow(0 0 5px #ff00ff);
+}
+
+.grid-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.grid-item p {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack into 1 column */
+    }
+    .grid-item.tall {
+        grid-row: span 1;
+    }
+}
+/* ------------------ EPISODES ------------------ */
+/* Section Header */
+.episodes {
+    padding: 80px 20px;
+    background-color: #0f041d;
+    color: white;
+}
+
+.episodes h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+/* Grid Layout */
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Styling */
+.episode-card {
+    background-color: #1a0b2e;
+    border-radius: 20px;
+    overflow: hidden; /* Clips the video corners to match the card */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive Video Container (16:9 Aspect Ratio) */
+.episode-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.episode-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Content inside the card */
+.episode-content {
+    padding: 25px;
+}
+
+.episode-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.episode-content p {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Duration Tag (The green text at the bottom) */
+.episode-duration {
+    display: flex;
+    align-items: center;
+    color: #00ff88; /* Bright green from the image */
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.episode-duration::before {
+    content: '▶'; /* Small play icon */
+    margin-right: 8px;
+    font-size: 0.7rem;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .episodes-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .episodes-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        max-width: 450px; /* Keeps cards from getting too wide on mobile */
+    }
+    
+    .episodes h2 {
+        font-size: 2rem;
+    }
+}
+/* ------------------ HOST ------------------ */
+.host{padding:80px 0}
+
+.host-card{
+  background:#2a1244;
+  padding:30px;
+  border-radius:20px;
+  display:flex;
+  gap:30px;
+  align-items:center;
+}
+
+.host-card img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.host-info p{opacity:.8;margin:10px 0 15px}
+.socials{display:flex;gap:12px}
+
+/* ------------------ FOOTER ------------------ */
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Footer Styling */
+.techwave-footer {
+    background-color: #1a0b3c; /* Dark Purple Base */
+    background-image: url('assets/footer-bg.png'); /* Change this to your wave image */
+    background-repeat: no-repeat;
+    background-size: cover;    /* This makes it stretch to fill the full width/height */
+    background-position: center; /* Keeps the waves centered */
+    
+    /* 4. Layout */
+    width: 100%;               /* Ensures it spans the full browser width */
+    min-height: 300px;         /* Adjust based on how tall you want the footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0;
+}
+  
+
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Gradient Logo Effect */
+.brand-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.brand-title span {
+    background: linear-gradient(90deg, #ff4d4d, #f900ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Social Icons Row */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.social-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.social-item:hover {
+    color: #ffffff;
+}
+
+.social-item img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0.8);
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 20px;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Medium Devices (Tablets/Laptops) */
+@media (max-width: 992px) {
+    .brand-title {
+        font-size: 2.8rem;
+    }
+    .social-links {
+        gap: 15px;
+    }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 600px) {
+    .brand-title {
+        font-size: 2.2rem;
+    }
+    .social-links {
+        flex-direction: column; /* Stack icons vertically on very small screens */
+        gap: 15px;
+        align-items: center;
+    }
+    .techwave-footer {
+        padding: 40px 15px;
+    }
+}
+/* Container for all platforms */
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Individual platform item */
+.platform-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and text */
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect: makes the whole item lift slightly */
+.platform-item:hover {
+  transform: translateY(-2px);
+  color: #000;
+}
+
+/* The Circular Icon with Border */
+.platforms {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.platform-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.platform-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.platform-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+.icon-circle {
+  /* 1. The Size */
+  width: 40px;
+  height: 40px;
+
+  /* 2. The Border (Make sure 'solid' is there) */
+  border: 2px solid #000000; 
+  border-radius: 50%;
+
+  /* 3. Centering the image inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* 4. Background (Transparent as requested) */
+  background: transparent;
+}
+
+.icon-circle img {
+  /* This controls how big the icon looks inside the circle */
+  width: 60%; 
+  height: 60%;
+  object-fit: contain;
+}
+/* ------------------ RESPONSIVE ------------------ */
+@media(max-width:992px){
+  .feature-grid,.episode-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:576px){
+  .nav-menu,.btn-gradient{display:none}
+  .hamburger{display:block}
+  .hero-title{font-size:32px}
+  .feature-grid,.episode-grid{grid-template-columns:1fr}
+  .host-card{flex-direction:column;text-align:center}
+}
